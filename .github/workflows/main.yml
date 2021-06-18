@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run:  pip install flake8
       - name: Check code style
-        run: python -m flake8 ./ --ignore=F401,F402
+        run: python -m flake8 ./ --ignore=F401,E402
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
