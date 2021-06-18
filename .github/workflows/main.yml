@@ -77,4 +77,4 @@ jobs:
         run: |
           sudo docker ps
           sudo docker rm -f lab3
-          sudo docker run -d -p 8080:5000 --name lab3 itatsenko/lab3:$GITHUB_RUN_ID
+          sudo docker run -p 8080:5000 -it --name lab3 itatsenko/lab3:$GITHUB_RUN_ID
