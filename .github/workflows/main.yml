@@ -63,10 +63,10 @@ jobs:
         run: sudo docker image tag test 28122001/test:$GITHUB_RUN_ID
       - 
         name: Push docker
-        run: sudo docker push 28122001/test:$GITHUB_RUN_ID
+        run: sudo docker push itatsenko/lastlab:$GITHUB_RUN_ID
       -
         name: Docker run
         run: |
           sudo docker ps
-          sudo docker rm -f test
-          sudo docker run -d -p 8080:5000 --name test 28122001/test:$GITHUB_RUN_ID
+          sudo docker rm -f lastlab
+          sudo docker run -d -p 8080:5000 --name lastlab itatsenko/lastlab:$GITHUB_RUN_ID
