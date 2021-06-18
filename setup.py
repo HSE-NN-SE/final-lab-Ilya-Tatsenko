@@ -1,11 +1,11 @@
 import io
 
-from setuptools import find_packages, setup
+from setuptools import find_packages,  setup
 
 with io.open('README.rst', 'rt', encoding='utf8') as f:
-    readme = f.read()
+      readme = f.read()
 
-setup(
+   setup(
     name='js_example',
     version='1.0.0',
     url='http://flask.pocoo.org/docs/patterns/jquery/',
