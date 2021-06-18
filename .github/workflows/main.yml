@@ -1,6 +1,6 @@
 
 
-name: CI
+name: CI/CD
 
 # Controls when the action will run. 
 on:
