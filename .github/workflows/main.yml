@@ -62,7 +62,7 @@ jobs:
         name: Tag Change
         run: sudo docker image tag test 28122001/test:$GITHUB_RUN_ID
       - 
-        name: Push Docker on GitHub
+        name: Push Docker on DockertHub
         run: sudo docker push 28122001/test:$GITHUB_RUN_ID
       -
         name: Run
