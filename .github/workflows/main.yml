@@ -23,7 +23,7 @@ jobs:
         run: | 
           sudo apt update
           sudo apt install python3-pip -y
-          pip install flake8
+          pip3 install flake8
       - name: Check code style
         run: python3 -m flake8 ./ --ignore=F401,E402
         
@@ -35,9 +35,11 @@ jobs:
       - uses: actions/checkout@v2
       - name: Tests
         run: |
-          pip install -e '.[test]'
-          python -m coverage run -m pytest
-          python -m coverage report
+          sudo apt update
+          sudo apt install python3-pip -y
+          pip3 install -e '.[test]'
+          python3 -m coverage run -m pytest
+          python3 -m coverage report
           
           
   Docker_Build_and_Deploy:
