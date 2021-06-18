@@ -41,6 +41,11 @@ jobs:
           python3 -m coverage run -m pytest
           python3 -m coverage report
           
+  build:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v2
+          
           
   Docker_Build_and_Deploy:
     runs-on: self-hosted
