@@ -57,10 +57,10 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
         name: Docker build
-        run: sudo docker build . --tag test
+        run: sudo docker build . --tag lastlab
       - 
         name: Change tag
-        run: sudo docker image tag test 28122001/test:$GITHUB_RUN_ID
+        run: sudo docker image tag lastlab itatsenko/lastlab:$GITHUB_RUN_ID
       - 
         name: Push docker
         run: sudo docker push itatsenko/lastlab:$GITHUB_RUN_ID
